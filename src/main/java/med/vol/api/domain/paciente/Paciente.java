@@ -1,12 +1,11 @@
-package med.vol.api.paciente;
+package med.vol.api.domain.paciente;
 
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.vol.api.endereco.Endereco;
+import med.vol.api.domain.endereco.Endereco;
 
     @Getter
     @EqualsAndHashCode(of = "id")
@@ -50,7 +49,7 @@ import med.vol.api.endereco.Endereco;
                 endereco.atualizarInformacoes(dados.endereco());
         }
 
-        public void inativar() {
+        public void excluir() {
             this.ativo = false;
         }
     }
